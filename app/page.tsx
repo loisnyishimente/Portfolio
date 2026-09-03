@@ -3,11 +3,8 @@ import {
   ArrowRight,
   ArrowUpRight,
   Code2,
-  Compass,
-  HeartPulse,
   Link2,
   MapPin,
-  Wallet,
 } from 'lucide-react';
 
 const projects = [
@@ -19,7 +16,10 @@ const projects = [
     contribution: 'Front-end & mobile development',
     theme: 'murika',
     image: '/images/murika.webp',
-    icon: null,
+    imageAlt: 'Murika creative marketplace campaign',
+    imageWidth: 960,
+    imageHeight: 600,
+    screenshot: false,
     url: 'https://murika.rw',
   },
   {
@@ -29,8 +29,12 @@ const projects = [
       'Making hospital workflows simpler, more connected, and secure.',
     contribution: 'Full-stack & biometric integration',
     theme: 'medisoft',
-    image: null,
-    icon: HeartPulse,
+    image: '/images/medisoft.png',
+    imageAlt:
+      'Medisoft website showing its electronic health records platform and hospital dashboard',
+    imageWidth: 1918,
+    imageHeight: 826,
+    screenshot: true,
     url: 'https://medisoft.rw',
   },
   {
@@ -40,8 +44,12 @@ const projects = [
       'Helping visitors discover places and find their way with ease.',
     contribution: 'Web & mobile interfaces',
     theme: 'isange',
-    image: null,
-    icon: Compass,
+    image: '/images/isange.png',
+    imageAlt:
+      'Isange city services page with permits, utilities, and citizen services',
+    imageWidth: 1916,
+    imageHeight: 871,
+    screenshot: true,
     url: 'https://isange.cybaselabs.com',
   },
   {
@@ -51,8 +59,11 @@ const projects = [
       'Bringing member management and savings-group activity together.',
     contribution: 'Full-stack development',
     theme: 'ibimina',
-    image: null,
-    icon: Wallet,
+    image: '/images/ibimina.png',
+    imageAlt: 'Ikimina community savings platform showing its member dashboard',
+    imageWidth: 1915,
+    imageHeight: 896,
+    screenshot: true,
     url: 'https://ikimina.rw',
   },
 ];
@@ -160,7 +171,6 @@ export default function Home() {
           </div>
           <div className="project-grid">
             {projects.map((project, index) => {
-              const Icon = project.icon;
               return (
                 <article
                   className={'project-card ' + project.theme}
@@ -176,34 +186,20 @@ export default function Home() {
                       ' — visit project website (opens in a new tab)'
                     }
                   >
-                    <div className="project-cover">
-                      {project.image ? (
-                        <img
-                          className="project-image"
-                          src={project.image}
-                          alt="Murika creative marketplace campaign"
-                          width="960"
-                          height="600"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="project-brand" aria-hidden="true">
-                          {Icon && (
-                            <Icon
-                              className="brand-icon"
-                              size={44}
-                              strokeWidth={1.3}
-                            />
-                          )}
-                          <span>
-                            {project.name}
-                            <span className="brand-period">.</span>
-                          </span>
-                          <span className="brand-caption">
-                            {project.category}
-                          </span>
-                        </div>
-                      )}
+                    <div
+                      className={
+                        'project-cover' +
+                        (project.screenshot ? ' project-cover-screenshot' : '')
+                      }
+                    >
+                      <img
+                        className="project-image"
+                        src={project.image}
+                        alt={project.imageAlt}
+                        width={project.imageWidth}
+                        height={project.imageHeight}
+                        loading="lazy"
+                      />
                       <span className="project-number">0{index + 1}</span>
                       <span className="project-open" aria-hidden="true">
                         <ArrowUpRight size={21} />

@@ -27,7 +27,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local environment
-.env*
 
 # deployment and generated files
 .vercel
@@ -38,4 +37,4 @@ next-env.d.ts
 /work/
 
 .vercel
-.env*
+config.bat
