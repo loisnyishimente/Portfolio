@@ -1,5 +1,6 @@
 # Portfolio assets
 
+- `public/images/medisoft.png`, `public/images/isange.png`, and `public/images/ibimina.png`: original screenshots supplied by Lois as `Capture.PNG`, `Capture1.PNG`, and `Capture2.PNG`, respectively. Copied without modification and displayed uncropped in their matching project cards.
 - `public/images/murika.webp`: optimized from Murika's own public social image, https://murika.rw/images/fc385047272e93c3.png. Used to identify the project Lois contributed to; this is campaign artwork, not a screenshot of Lois's portfolio.
 - `public/fonts/manrope-latin.woff2`: Manrope, served locally. SIL Open Font License included at `public/fonts/OFL.txt`.
 - `public/images/sage-ribbon.webp`: original decorative artwork generated using the built-in image-generation tool and optimized to a 900 × 900 WebP. It does not represent a product or project interface.
