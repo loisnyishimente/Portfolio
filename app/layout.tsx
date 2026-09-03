@@ -3,8 +3,13 @@ import './globals.css';
 const title = 'Lois Nyishimente — Software Developer';
 const description =
   'Thoughtful code. Meaningful experiences. Explore web, mobile, and full-stack projects by Lois Nyishimente, based in Kigali, Rwanda.';
+const vercelHost =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+const siteOrigin = vercelHost
+  ? `https://${vercelHost}`
+  : process.env.SITE_ORIGIN || 'http://localhost:3000';
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_ORIGIN || 'http://localhost:3000'),
+  metadataBase: new URL(siteOrigin),
   title,
   description,
   icons: { icon: '/favicon.svg' },

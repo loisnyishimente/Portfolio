@@ -1,0 +1,8 @@
+node_modules
+dist
+outputs
+work
+.git
+.wrangler
+.env*
+*.tsbuildinfo
