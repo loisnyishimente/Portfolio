@@ -325,6 +325,25 @@ h2 {
   object-fit: cover;
   transition: transform 400ms;
 }
+.project-cover-screenshot {
+  padding: 30px 12px 35px;
+}
+.project-cover-screenshot .project-image {
+  object-fit: contain;
+}
+.project-cover-screenshot .project-number {
+  top: 10px;
+  left: 16px;
+}
+.project-cover-screenshot .project-open {
+  bottom: 8px;
+  right: 12px;
+  width: 27px;
+  height: 27px;
+}
+.project-link:hover .project-cover-screenshot .project-image {
+  transform: none;
+}
 .murika {
   --cover-bg: #f81146;
   --cover-fg: #fff;
@@ -340,39 +359,6 @@ h2 {
 .ibimina {
   --cover-bg: #dfe8d3;
   --cover-fg: #4d6438;
-}
-.project-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 36px;
-  transition: transform 400ms;
-}
-.brand-icon {
-  margin-bottom: 12px;
-}
-.project-brand > span:first-of-type {
-  font-size: clamp(36px, 4.5vw, 59px);
-  font-weight: 700;
-  letter-spacing: -3px;
-  line-height: 1.2;
-}
-.brand-period {
-  opacity: 0.5;
-}
-.brand-caption {
-  margin-top: 10px;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.isange .project-brand > span:first-of-type {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(43px, 5vw, 68px);
 }
 .project-number {
   position: absolute;
@@ -404,8 +390,7 @@ h2 {
     transform 200ms,
     background 200ms;
 }
-.project-link:hover .project-image,
-.project-link:hover .project-brand {
+.project-link:hover .project-image {
   transform: scale(1.035);
 }
 .project-link:hover .project-cover {
@@ -763,25 +748,6 @@ h3 {
   }
   .project-cover {
     aspect-ratio: 1.65;
-  }
-  .project-brand {
-    padding: 20px;
-  }
-  .brand-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 7px;
-  }
-  .brand-caption {
-    font-size: 8px;
-    letter-spacing: 1.4px;
-    margin-top: 6px;
-  }
-  .project-brand > span:first-of-type {
-    font-size: 52px;
-  }
-  .isange .project-brand > span:first-of-type {
-    font-size: 62px;
   }
   .project-details {
     padding-top: 16px;
